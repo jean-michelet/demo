@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node --test test/**/*.test.js",
+    "test": "cross-env node --test test/**/*.test.js",
     "start": "fastify start -l info app.js",
     "dev": "fastify start -w -l info -P app.js",
     "lint": "standard",
@@ -25,6 +25,7 @@
     "fastify-plugin": "^4.0.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "standard": "^17.1.0"
   }
 }

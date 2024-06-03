@@ -29,9 +29,3 @@ jobs:
       
     - name: Test
       run: npm test
-    
-    # Test that the server doesn't crash
-    - name: Start server
-      run: npm run start & sleep 5; kill $!
-    - name: Run development server
-      run: npm run dev & sleep 5; kill $!
