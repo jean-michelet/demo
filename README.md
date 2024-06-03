@@ -7,6 +7,8 @@
 
 The aim of this repository is to provide a concrete example of a Fastify application using what are considered best practices by the Fastify community.
 
+**Prerequisites:** You need to have Node.js version 22 or higher installed.
+
 ## Getting started
 Install [`fastify-cli`](https://github.com/fastify/fastify-cli):
 ```
