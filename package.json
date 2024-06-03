@@ -12,7 +12,7 @@
     "start": "fastify start -l info app.js",
     "dev": "fastify start -w -l info -P app.js",
     "lint": "standard",
-    "lint:fix": "npm run format -- --fix"
+    "lint:fix": "npm run lint -- --fix"
   },
   "keywords": [],
   "author": "Michelet Jean <jean.antoine.michelet@gmail.com>",
