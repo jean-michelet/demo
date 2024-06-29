@@ -56,7 +56,11 @@ jobs:
           JWT_SECRET=$(openssl rand -hex 32)
           echo "JWT_SECRET=$JWT_SECRET" >> $GITHUB_ENV
 
+<<<<<<< HEAD
       - name: Generate dummy .env
+=======
+      - name: Generate dummy .env for scripts using -env-file=.env flag
+>>>>>>> base-architecture
         run: touch .env
 
       - name: Test
