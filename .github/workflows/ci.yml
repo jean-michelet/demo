@@ -45,23 +45,19 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm i
+        run: npm i --ignore-scripts
 
       - name: Lint Code
         run: npm run lint
+
+      - name: Generate dummy .env for scripts using -env-file=.env flag
+        run: touch .env
 
       - name: Generate JWT Secret
         id: gen-jwt
         run: |
           JWT_SECRET=$(openssl rand -hex 32)
           echo "JWT_SECRET=$JWT_SECRET" >> $GITHUB_ENV
-
-<<<<<<< HEAD
-      - name: Generate dummy .env
-=======
-      - name: Generate dummy .env for scripts using -env-file=.env flag
->>>>>>> base-architecture
-        run: touch .env
 
       - name: Test
         env:
