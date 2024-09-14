@@ -93,6 +93,8 @@ export default async function serviceApp(
     return { message: "Not Found" };
   });
 
+  console.log(`fastify.config.FASTIFY_VITE_DEV_MODE=${fastify.config.FASTIFY_VITE_DEV_MODE}`)
+
     // We setup the SPA
     await fastify.register(fastifyVite, function (fastify) {
       return {
