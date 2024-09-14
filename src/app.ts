@@ -93,21 +93,9 @@ export default async function serviceApp(
     return { message: "Not Found" };
   });
 
-  console.log(`fastify.config.FASTIFY_VITE_DEV_MODE=${fastify.config.FASTIFY_VITE_DEV_MODE}`)
-
-    // We setup the SPA
-    await fastify.register(fastifyVite, function (fastify) {
-      return {
-        root: path.resolve(import.meta.dirname, '../'),
-        dev: fastify.config.FASTIFY_VITE_DEV_MODE,
-        spa: true
-      }
-    });
-    
     // Route must match vite "base": https://vitejs.dev/config/shared-options.html#base
     fastify.get('/', (req, reply) => {
-      return reply.html();
+      return "hello";
     });
   
-    await fastify.vite.ready();
 }
