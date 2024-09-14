@@ -50,9 +50,6 @@ jobs:
       - name: Lint Code
         run: npm run lint
 
-      - name: Build Vite
-        run: npm run build:client
-
       - name: Generate JWT Secret
         id: gen-jwt
         run: |
