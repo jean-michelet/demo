@@ -11,7 +11,9 @@ it("should be rate limited", async (t) => {
         url: "/"
       });
 
-    assert.strictEqual(res.statusCode, 200);
+      assert.equal(res.body, "Vite is not registered.")
+
+      assert.strictEqual(res.statusCode, 200);
     }
   
     const res = await app.inject({
