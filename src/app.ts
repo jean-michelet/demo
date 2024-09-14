@@ -5,7 +5,6 @@
 import path from "node:path";
 import fastifyAutoload from "@fastify/autoload";
 import { FastifyInstance, FastifyPluginOptions } from "fastify";
-import fastifyVite from "@fastify/vite";
 
 export const options = {
   ajv: {
@@ -93,9 +92,10 @@ export default async function serviceApp(
     return { message: "Not Found" };
   });
 
+    
     // Route must match vite "base": https://vitejs.dev/config/shared-options.html#base
     fastify.get('/', (req, reply) => {
-      return "hello";
+      return "reply.html()";
     });
   
 }
