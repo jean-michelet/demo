@@ -73,4 +73,4 @@ jobs:
           RATE_LIMIT_MAX: 4
           FASTIFY_VITE_DEV_MODE: true
         run: 
-          npm run db:migrate && npm run test
+          npm run build:client && npm run db:migrate && npm run test
